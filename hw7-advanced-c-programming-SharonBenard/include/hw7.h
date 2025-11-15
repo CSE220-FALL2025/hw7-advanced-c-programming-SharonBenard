@@ -14,14 +14,13 @@ typedef struct {
     char name;
     unsigned int num_rows;
     unsigned int num_cols;
-    int values[]; //FLEXIBLE ARRAY MEMBER ---> structs size depends on how many elements matrix has
+    int values[]; 
 } matrix_sf;
 
-//identity of linked list is head node (access LL via ptr to head node)
 typedef struct bst_sf {
-    matrix_sf *mat;   //DATA FIELD of LL (type is matrix_sf)
-    struct bst_sf *left_child; //ptr of type bst_sf to left child
-    struct bst_sf *right_child; //ptr of type bst_sf to right child
+    matrix_sf *mat;
+    struct bst_sf *left_child;
+    struct bst_sf *right_child;
 } bst_sf;
 
 /**
